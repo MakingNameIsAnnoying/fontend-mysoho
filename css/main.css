@@ -1,0 +1,289 @@
+body {
+  padding: 0;
+}
+.main {
+  padding: 0;
+}
+.best_images {
+  display: flex;
+}
+.best_one {
+  max-width: 195px;
+  margin: 10px;
+  cursor: pointer;
+}
+.row {
+  display: flex;
+}
+.best_pd_txt {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 13px;
+  padding-top: 25px;
+}
+.best_images {
+  font-size: 14px;
+}
+
+.best_image {
+  width: 195px;
+  max-width: 195px;
+  max-height: 100%;
+  height: 195px;
+  background-size: contain;
+}
+img {
+  max-height: 100%;
+}
+.img_best {
+  width: 100%;
+  height: 100%;
+}
+.two_btn_middle {
+  padding: 0 15px;
+}
+.select {
+  z-index: 10;
+}
+.best_name {
+  cursor: pointer;
+}
+.best_price {
+  cursor: pointer;
+}
+.best_price {
+  font-weight: bold;
+}
+
+.bottom_one {
+  position: relative;
+  margin-left: 5px;
+  width: 610px;
+  height: 104px;
+  padding: 13px 0;
+  margin-top: 1px;
+  border-top: 1px solid gray;
+}
+.tp3 {
+  cursor: pointer;
+}
+.pd_info {
+  width: 85%;
+  position: absolute;
+  top: 30px;
+  left: 90px;
+}
+.type3_row {
+  display: flex;
+}
+.bottom_pd {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  cursor: pointer;
+}
+.sale_rate {
+  font-size: 15px;
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
+.sale_price {
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+}
+.nav {
+  position: sticky;
+  width: 100%;
+  top: 56px;
+  padding-top: 15px;
+  padding-left: 12px;
+  padding-bottom: 15px;
+  z-index: 50;
+  background-color: white;
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+}
+.og_price {
+  margin-right: 6px;
+  font-weight: normal;
+  color: #ccc;
+  text-decoration: line-through;
+}
+.for_click {
+  cursor: pointer;
+}
+.bottom_cart {
+  float: right;
+  width: 26px;
+  height: 26px;
+  margin-top: -32px;
+  background: url(https://image.makeshop.co.kr/mysoho/assets/shop/img/common/ico_cart_type1.png)
+    no-repeat center / 26px auto;
+  cursor: pointer;
+}
+.notice {
+  display: flex;
+  border-top: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.notice_ico {
+  background: url(https://image.makeshop.co.kr/mysoho/assets/shop/img/common/ico_notice.png)
+    no-repeat;
+  background-size: 15px 12px;
+  padding-left: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.notice_txt {
+  padding-left: 10px;
+  font-size: 14px;
+}
+.rescent {
+  cursor: pointer;
+}
+.select {
+  padding: 0 5px;
+  position: absolute;
+  border: 1px solid black;
+  display: none;
+  background-color: white;
+  border-radius: 5%;
+}
+.changeBtn {
+  padding-top: 5px;
+  float: right;
+}
+.for_click {
+  max-width: fit-content;
+}
+.changeBtn div {
+  background: url(https://image.makeshop.co.kr/mysoho/assets/shop/img/common/ico_list_type2.png)
+    no-repeat;
+  display: block;
+  width: 45px;
+  height: 47px;
+  line-height: 47px;
+  text-indent: -9999em;
+  background-size: 14px;
+}
+.type3 {
+  display: none;
+}
+.tp3 {
+  background: url(https://img.makeshop.co.kr/1/1371/201902/d6a6527987d660f2b72290920ce2a33c.png);
+  display: inline-block;
+  width: 206px;
+  height: 206px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 5px;
+  background-size: cover;
+  text-indent: -9999em;
+}
+
+.image_box {
+  margin-right: 10px;
+  position: relative;
+  width: 100%;
+  min-width: 140px;
+  min-height: 140px;
+  max-width: 290px;
+  max-height: 290px;
+  box-sizing: border-box;
+  object-fit: contain;
+  z-index: 0;
+}
+.img1 {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.for_row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.img_sep {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+}
+.in_cart {
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 7.5px;
+  right: 7.5px;
+  width: 45px;
+  height: 50px;
+  background: url(https://sohonara.mysoho.com/assets/shop/img/common/ico_cart_type1.png)
+    no-repeat center / 45px auto;
+}
+.img_info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.info_price {
+  font-weight: bold;
+}
+.type4 {
+  display: none;
+  flex-wrap: wrap;
+  justify-self: center;
+}
+.img_one {
+  position: relative;
+}
+.tp1_cart {
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 7.5px;
+  right: 25px;
+  width: 45px;
+  height: 50px;
+  background: url(https://sohonara.mysoho.com/assets/shop/img/common/ico_cart_type1.png)
+    no-repeat center / 45px auto;
+}
+.ad {
+  margin-top: 15px;
+}
+.type1 {
+  display: none;
+}
+.tp1_ {
+  padding: 30px;
+}
+.tp1_ div {
+  padding: 15px;
+}
+.tp1_info {
+  display: flex;
+  justify-content: space-between;
+}
+.tp1_btn {
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.tp1_btn button {
+  height: 100%;
+  background-color: white;
+  font-weight: bold;
+}
+.tp1_container {
+  margin-bottom: 30px;
+}

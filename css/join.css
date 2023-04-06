@@ -1,0 +1,62 @@
+.join_container {
+	display: flex;
+	flex-flow: column wrap;
+}
+.join_top_txt {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fafafa;
+	border-bottom: 1px solid #d6d6d6;
+}
+.join_top_txt h2 {
+	font-size: 16px;
+	line-height: 52px;
+	font-weight: bold;
+}
+.inputs {
+	display: flex;
+	flex-flow: column wrap;
+	padding: 20px;
+}
+.inputs input {
+	height: 42px;
+	font-size: 15px;
+	margin-top: 14px;
+	border: 1px solid #dedede;
+	padding: 0 10px;
+}
+.agree_box {
+	padding: 20px;
+	background: #f2f3f5;
+	border-top: 1px solid #d0d0d0;
+}
+.agree_row {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 12px;
+}
+.agree_row span {
+	font-size: 14px;
+}
+.agree_row button {
+	height: 23px;
+	line-height: 23px;
+	padding: 0 10px;
+	border: 1px solid #808080;
+	box-sizing: border-box;
+	color: #000;
+	font-size: 11px;
+}
+.agree_top span {
+	font-size: 16px;
+	font-weight: bold;
+}
+.join_btn_box button {
+	width: 100%;
+	color: white;
+	height: 50px;
+	line-height: 52px;
+	background: #333;
+	margin-top: 40px;
+}

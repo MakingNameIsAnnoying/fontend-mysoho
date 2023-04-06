@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>회원가입</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="/css/public.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="/css/join.css"
+		/>
+	</head>
+
+	<body>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+		<div class="contain_all col-6 d-flex justify-content-center">
+			<div class="container">
+				<div class="row">
+					<div class="header">
+						<script>
+							$(".header").load("/head.html");
+						</script>
+					</div>
+
+					<!-- 검색창 -->
+					<div class="glass_open">
+						<script>
+							$(".glass_open").load("/searcher.html");
+						</script>
+					</div>
+					<!-- 사이드 -->
+					<div class="aside">
+						<script>
+							$(".aside").load("/side.html");
+						</script>
+					</div>
+					<div class="join_top_txt">
+						<h2>회원가입</h2>
+					</div>
+					<div class="join_container">
+						<div class="inputs">
+							<input
+								type="text"
+								placeholder="아이디"
+							/>
+							<input
+								type="text"
+								placeholder="비밀번호"
+							/>
+							<input
+								type="text"
+								placeholder="비밀번호 재입력"
+							/>
+							<input
+								type="text"
+								placeholder="이름"
+							/>
+							<input
+								type="text"
+								placeholder="이메일"
+							/>
+							<input
+								type="text"
+								placeholder="휴대폰번호"
+							/>
+						</div>
+						<div class="agree_box">
+							<div class="agree_top">
+								<a
+									href="javascript:void(0);"
+									class="box_all_agree"
+									onclick="agree('first');"
+								>
+									<input
+										type="checkbox"
+										class="ck_agree_all"
+									/>
+									<span>약관 전체 동의</span>
+								</a>
+							</div>
+							<div class="agree_row">
+								<div>
+									<input
+										type="checkbox"
+										class="1-1"
+									/>
+									<a
+										href="javascript:void(0);"
+										class="box_agree"
+										onclick="agree('1');"
+									>
+										<span>이용약관 동의(필수)</span>
+									</a>
+								</div>
+								<button onclick="open_popup('join',1)">보기</button>
+							</div>
+							<div class="agree_row">
+								<div>
+									<input
+										type="checkbox"
+										class="1-2"
+									/>
+									<a
+										href="javascript:void(0);"
+										onclick="agree('2');"
+									>
+										<span>이용약관 동의(필수)</span>
+									</a>
+								</div>
+								<button onclick="open_popup('join',2)">보기</button>
+							</div>
+							<div class="agree_row">
+								<div>
+									<input
+										type="checkbox"
+										class="1-3"
+									/>
+									<a
+										href="javascript:void(0);"
+										onclick="agree('3');"
+									>
+										<span>이용약관 동의(필수)</span>
+									</a>
+								</div>
+								<button onclick="open_popup('join',3)">보기</button>
+							</div>
+							<div class="join_btn_box">
+								<button>가입하기</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- 푸터 -->
+					<div class="bottom_two_btns">
+						<script>
+							$(".bottom_two_btns").load("/btns.html");
+						</script>
+					</div>
+
+					<div class="footer">
+						<script>
+							$(".footer").load("/footer.html");
+						</script>
+					</div>
+					<!-- 화면에 붙은 버튼 -->
+				</div>
+			</div>
+		</div>
+
+		<script
+			type="text/javascript"
+			src="/js/public.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="/js/join.js"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+			integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

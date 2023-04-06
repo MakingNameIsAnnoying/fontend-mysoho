@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QnA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/public.css" />
+    <link rel="stylesheet" href="/css/qna.css" />
+  </head>
+
+  <body>
+    <div class="contain_all col-6 d-flex justify-content-center">
+      <div class="container">
+        <div class="row">
+          <div class="header">
+            <div class="left">
+              <div class="img threebar" onclick="aClick(this);">삼단바</div>
+              <div class="img glass" onclick="aClick(this);">돋보기</div>
+            </div>
+            <div class="home_name">
+              <a href="/main.html">NURIRI</a>
+            </div>
+            <div class="right">
+              <a href="/user/cart.html">
+                <div class="img cart" onclick="aClick(this);">
+                  <span class="cartNum">0</span>
+                </div>
+              </a>
+              <a href="/user/logrin.html">
+                <div class="img door">로그인</div></a
+              >
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="glass_open">
+            <span onclick="aClick(this);">x</span>
+            <div>어떤 상품을 찾고 계신가요?</div>
+            <input type="text" placeholder="검색어를 입력해주세요" />
+            <span>돋보기 이미지</span>
+          </div>
+
+          <!-- 사이드 -->
+          <div class="aside">
+            <div class="first">
+              <span class="home"><a href="/main.html">홈</a></span>
+              <span class="sideX" onclick="aClick(this);">x</span>
+            </div>
+            <div class="aside_inner">
+              <a href="/product/nuriri.html"><span>nuriri</span></a>
+              <a href="/product/top.html"> <span>top</span></a>
+              <a href="/product/bottom.html"> <span>bottom</span></a>
+              <a href="/product/one-piece.html"> <span>one-piece</span></a>
+              <a href="/product/acc.html"> <span>acc</span></a>
+            </div>
+          </div>
+          <!-- 메인 -->
+          <span class="qna_top_txt">공지사항</span>
+          <div class="qna_con">
+            <div class="search_input">
+              <input type="text" placeholder="검색어를 입력하세요" />
+              <span>돋보기</span>
+            </div>
+            <div class="ask_btn_con">
+              <div class="own_btn">문의작성</div>
+            </div>
+            <div class="row_info">
+              <div class="qna_circle">답변<br />대기</div>
+              <div class="row_info_txt">
+                <span>비밀글입니다</span>
+                <div class="second_row">
+                  <span>기타</span>
+                  <span>id</span>
+                  <span>날짜</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 푸터 -->
+          <div class="bottom_two_btns">
+            <a href="javascript:void(0)"><div class="telephone"></div> </a>
+            <a href="#"><div class="top_arrow"></div></a>
+          </div>
+
+          <div class="footer">
+            <div class="seller">
+              <div class="seller_a">
+                <a href="javascript:void(0);" onclick="aClick(this);">
+                  사업자 정보
+                </a>
+              </div>
+              <div class="seller_info">
+                <div>상호 : (주)코리아센터닷컴</div>
+                <div>대표 : 김기록</div>
+                <div>사업자등록번호 : 206-81-21131 [사업자정보확인]</div>
+                <div>통신판매업신고 : 통신판매 제 2005-00874호</div>
+                <div>
+                  주소 : 서울 금천구 가산디지털1로 168 (가산동,우림라이온스밸리)
+                  A동 14층
+                </div>
+                <div>개인정보보호책임자 : 홍길동</div>
+              </div>
+            </div>
+            <div class="ft_info">
+              <div>운영시간</div>
+              <div>
+                <button><span>전화기 사진</span> 번호</button>
+                <button><span>편지 사진</span> 이메일</button>
+              </div>
+              <div>
+                <a href="/user/agree.html">이용약관</a>
+                <a href="/user/agree.html">개인정보처리방침</a>
+                <a href="/user/qna.html">Q&A 게시판</a>
+              </div>
+            </div>
+          </div>
+          <!-- 화면에 붙은 버튼 -->
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script type="text/javascript" src="/js/public.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

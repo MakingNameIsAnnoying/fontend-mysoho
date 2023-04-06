@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>메인</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="/css/public.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="/css/main.css"
+		/>
+	</head>
+
+	<body>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+		<div class="contain_all d-flex justify-content-center">
+			<div class="container">
+				<div class="row">
+					<div class="header">
+						<script>
+							$(".header").load("/head.html");
+						</script>
+					</div>
+
+					<!-- 검색창 -->
+					<div class="glass_open">
+						<script>
+							$(".glass_open").load("/searcher.html");
+						</script>
+					</div>
+					<div class="nav">
+						<script>
+							$(".nav").load("/nav.html");
+						</script>
+					</div>
+					<!-- 사이드 -->
+					<div class="aside">
+						<script>
+							$(".aside").load("/side.html");
+						</script>
+					</div>
+					<div class="main">
+						<!-- 메인 -->
+						<!-- 캐러셀 -->
+						<div
+							id="carouselExampleIndicators"
+							class="carousel slide c_s"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="0"
+									class="active"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="1"
+									aria-label="Slide 2"
+								></button>
+							</div>
+							<div class="carousel-inner">
+								<div class="carousel-item active h-">
+									<img
+										src="/images/f2a81f39b4ab14bdd219af6e8fec7297.jpg"
+										class="d-block"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item">
+									<img
+										src="/images/2e61ee8f4c58844901ff686a616f03ae.jpg"
+										class="d-block"
+										alt="..."
+									/>
+								</div>
+							</div>
+							<button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide="prev"
+							>
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide="next"
+							>
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<!-- 베스트 -->
+						<div class="best_pd_txt">
+							<span>베스트 상품</span>
+						</div>
+						<div class="best_images row">
+							<div class="best_one">
+								<div
+									class="best_image"
+									onclick="make_detail(this);"
+								>
+									<img
+										class="img_best"
+										src="https://img.makeshop.co.kr/1/1371/201902/15dac27e8d767f405ecd84786413ad19.png"
+										alt=""
+									/>
+								</div>
+								<div class="best_name">아크네데님 연청</div>
+								<div class="best_price">35,000원</div>
+							</div>
+							<div class="best_one">
+								<div
+									class="best_image"
+									onclick="make_detail(this);"
+								>
+									<img
+										class="img_best"
+										src="	https://img.makeshop.co.kr/1/1371/201902/d6a6527987d660f2b72290920ce2a33c.png"
+										alt=""
+									/>
+								</div>
+								<div class="best_name">린넨 ops 베이지</div>
+								<div class="best_price">44,100원</div>
+							</div>
+							<div class="best_one">
+								<div
+									class="best_image"
+									onclick="make_detail(this);"
+								>
+									<img
+										class="img_best"
+										src="	https://img.makeshop.co.kr/1/1371/201902/0609ced86595538cd42aa85ee6f4c45f.png"
+										alt=""
+									/>
+								</div>
+								<div class="best_name">브라운 사각 bag</div>
+								<div class="best_price">32,000원</div>
+							</div>
+						</div>
+						<div class="best_images row">
+							<div class="best_one">
+								<div
+									class="best_image"
+									onclick="make_detail(this);"
+								>
+									<img
+										class="img_best"
+										src="	https://img.makeshop.co.kr/1/1371/201902/242ced7785d1eeaec029be9457bab3e8.png"
+										alt=""
+									/>
+								</div>
+								<div class="best_name">린넨 ops 화이트</div>
+								<div class="best_price">39,900원</div>
+							</div>
+							<div class="best_one">
+								<div
+									class="best_image"
+									onclick="make_detail(this);"
+								>
+									<img
+										class="img_best"
+										src="	https://img.makeshop.co.kr/1/1371/201902/29116c10bf21223a5382cfac76b874ed.png"
+										alt=""
+									/>
+								</div>
+								<div class="best_name">도트 sk 오렌지</div>
+								<div class="best_price">42,000원</div>
+							</div>
+							<div class="best_one">
+								<div
+									class="best_image"
+									onclick="make_detail(this);"
+								>
+									<img
+										class="img_best"
+										src="	https://img.makeshop.co.kr/1/1371/201902/5ea10187021f32483958eb8c91e943bb.jpg"
+										alt=""
+									/>
+								</div>
+								<div class="best_name">린넨ops베이지</div>
+								<div class="best_price">44,100원</div>
+							</div>
+						</div>
+						<div class="ad_con">
+							<!-- 광고 -->
+							<div class="ad"></div>
+							<span class="two_btn_middle">
+								<span
+									class="rescent"
+									onclick="select();"
+									>최신순</span
+								>
+								<div class="select">
+									<div>판매순</div>
+									<div>낮은가격순</div>
+									<div>평점높은순</div>
+									<div>리뷰많은순</div>
+								</div>
+							</span>
+							<span class="changeBtn">
+								<div
+									class="changeImg"
+									onclick="fourChange(this);"
+								>
+									바꾸기 버튼
+								</div>
+							</span>
+						</div>
+						<!-- 타입2. 디폴트-->
+						<div class="four_change_type2">
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="https://img.makeshop.co.kr/1/1371/201902/d6a6527987d660f2b72290920ce2a33c.png"
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">퍼프블라우스 화이트</div>
+										<span class="sale_rate">9%</span>
+										<span class="sale_price">44,500원</span>
+										<span class="og_price">49,000</span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="https://img.makeshop.co.kr/1/1371/201902/115892be102b381a004ea0022421d6e7.png"
+										alt=""
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">퍼프 블라우스 퍼플</div>
+										<span class="sale_rate">9%</span>
+										<span class="sale_price">44,500원</span>
+										<span class="og_price">49,000</span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="https://img.makeshop.co.kr/1/1371/201902/0609ced86595538cd42aa85ee6f4c45f.png"
+										alt=""
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">브라운 사각 bag</div>
+										<span class="sale_rate"></span>
+										<span class="sale_price">32,000원</span>
+										<span class="og_price"></span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="https://img.makeshop.co.kr/1/1371/201902/5ea10187021f32483958eb8c91e943bb.jpg"
+										alt=""
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">린넨 ops 베이지</div>
+										<span class="sale_rate">10%</span>
+										<span class="sale_price">44,100원</span>
+										<span class="og_price">49,000원</span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="https://img.makeshop.co.kr/1/1371/201902/29116c10bf21223a5382cfac76b874ed.png"
+										alt=""
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">도트 sk 오렌지</div>
+										<span class="sale_rate"></span>
+										<span class="sale_price">42,000원</span>
+										<span class="og_price"></span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="	https://img.makeshop.co.kr/1/1371/201902/242ced7785d1eeaec029be9457bab3e8.png"
+										alt=""
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">린넨 ops 화이트</div>
+										<span class="sale_rate"></span>
+										<span class="sale_price">39,900원</span>
+										<span class="og_price"></span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png"
+										alt=""
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">골지원피스</div>
+										<span class="sale_rate"></span>
+										<span class="sale_price">32,000원</span>
+										<span class="og_price"></span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="	https://img.makeshop.co.kr/1/1371/201902/15dac27e8d767f405ecd84786413ad19.png"
+										alt=""
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">아크네데님 연청</div>
+										<span class="sale_rate"></span>
+										<span class="sale_price">35,000원</span>
+										<span class="og_price"></span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+							<div class="bottom_one row">
+								<div class="bottom_pd">
+									<img
+										src="https://img.makeshop.co.kr/1/1371/201902/81f5662d13dcab1ce7ee6fd978bbb5f5.png"
+										alt=""
+									/>
+								</div>
+								<div class="pd_info">
+									<div class="for_click">
+										<div class="pd_name">골지 브이티</div>
+										<span class="sale_rate"></span>
+										<span class="sale_price">35,000원</span>
+										<span class="og_price"></span>
+									</div>
+									<span class="bottom_cart"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- type3 -->
+					<div class="type3">
+						<div class="type3_row">
+							<div class="tp3">이미지</div>
+							<div class="tp3">이미지</div>
+							<div class="tp3">이미지</div>
+						</div>
+						<div class="type3_row">
+							<div class="tp3">이미지</div>
+							<div class="tp3">이미지</div>
+							<div class="tp3">이미지</div>
+						</div>
+						<div class="type3_row">
+							<div class="tp3">이미지</div>
+							<div class="tp3">이미지</div>
+							<div class="tp3">이미지</div>
+						</div>
+					</div>
+					<!-- type4 -->
+					<div class="type4">
+						<div class="for_row">
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png"
+										alt=""
+									/>
+									<a
+										href=""
+										class="in_cart"
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png
+"
+										alt=""
+									/>
+									<a
+										class="in_cart"
+										href=""
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+						</div>
+						<div class="for_row">
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png"
+										alt=""
+									/>
+									<a
+										href=""
+										class="in_cart"
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png
+"
+										alt=""
+									/>
+									<a
+										class="in_cart"
+										href=""
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+						</div>
+						<div class="for_row">
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png"
+										alt=""
+									/>
+									<a
+										href=""
+										class="in_cart"
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png
+"
+										alt=""
+									/>
+									<a
+										class="in_cart"
+										href=""
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+						</div>
+						<div class="for_row">
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png"
+										alt=""
+									/>
+									<a
+										href=""
+										class="in_cart"
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png
+"
+										alt=""
+									/>
+									<a
+										class="in_cart"
+										href=""
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+						</div>
+						<div class="for_row">
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png"
+										alt=""
+									/>
+									<a
+										href=""
+										class="in_cart"
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+							<div class="img_spe">
+								<div class="image_box">
+									<img
+										class="img1"
+										src="	https://img.makeshop.co.kr/1/1371/201902/2aaac2b5fedefa92510d799e9a151db1.png
+"
+										alt=""
+									/>
+									<a
+										class="in_cart"
+										href=""
+									></a>
+								</div>
+								<div class="img_info">
+									<span>골지원피스</span>
+									<span class="info_price">32,000원</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- type1 -->
+					<div class="type1">
+						<div class="img_one">
+							<img
+								src="	https://img.makeshop.co.kr/1/1371/201902/81f5662d13dcab1ce7ee6fd978bbb5f5.png"
+								alt=""
+							/>
+							<div class="tp1_cart"></div>
+						</div>
+						<div class="tp1_container">
+							<div class="tp1_">
+								<div>골지 브이티</div>
+								<div class="tp1_info">
+									<span> 19,900원</span> <span>공유</span>
+								</div>
+							</div>
+							<div class="tp1_btn">
+								<button>품절</button>
+							</div>
+						</div>
+					</div>
+					<!-- 공지사항 -->
+					<div class="notice">
+						<span class="notice_ico">공지사항</span>
+						<div class="notice_txt">등록된 공지사항이 없습니다.</div>
+					</div>
+
+					<!-- 푸터 -->
+
+					<div class="footer">
+						<script>
+							$(".footer").load("/footer.html");
+						</script>
+					</div>
+					<div class="bottom_two_btns">
+						<script>
+							$(".bottom_two_btns").load("/btns.html");
+						</script>
+					</div>
+					<!-- 화면에 붙은 버튼 -->
+				</div>
+			</div>
+		</div>
+		<script
+			type="text/javascript"
+			src="/js/public.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="/js/main.js"
+		></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+			integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

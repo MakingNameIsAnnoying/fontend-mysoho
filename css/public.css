@@ -1,0 +1,255 @@
+/* 헤더, 푸터, 움직이는 버튼들, 공지사항 */
+.contain_all {
+  width: 100%;
+  max-width: 640px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_con {
+  min-height: 440px;
+  padding-bottom: 100px;
+}
+.header {
+  max-width: 640px;
+  position: sticky;
+  background-color: white;
+  top: 0px;
+  left: center;
+  display: flex;
+  height: 56px;
+  text-align: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+.home {
+  width: 17px;
+  height: 20px;
+  margin-top: -10px;
+  text-indent: -99;
+  background: url(https://image.makeshop.co.kr/mysoho/assets/shop/img/btn/h40_home.gif)
+    no-repeat;
+  background-size: contain;
+}
+.home a {
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+.home_name {
+  margin-top: 9px;
+}
+.img {
+  cursor: pointer;
+}
+.aside span {
+  cursor: pointer;
+}
+.sideX {
+  font-size: 19px;
+  float: right;
+}
+.threebar {
+  width: 22px;
+  height: 45px;
+  text-indent: -9999em;
+  background: url(https://sohonara.mysoho.com/assets/shop/img/btn/tpl_shop_hamburger_menu_000000.png)
+    no-repeat center / 22px 19px;
+}
+.left {
+  display: flex;
+}
+.right {
+  display: flex;
+}
+.glass {
+  width: 22px;
+  height: 45px;
+  text-indent: -9999em;
+  background: url(https://sohonara.mysoho.com/assets/shop/img/btn/tpl_shop_search_000000.png)
+    no-repeat center / 22px 19px;
+}
+.cart {
+  position: relative;
+  width: 22px;
+  height: 45px;
+  background: url(https://sohonara.mysoho.com/assets/shop/img/btn/tpl_shop_basket_000000.png)
+    no-repeat center / 22px 19px;
+}
+.cartNum {
+  position: absolute;
+  top: 10px;
+  left: 1px;
+  font-weight: bold;
+  font-size: 10px;
+  color: #000;
+  width: 22px;
+  text-align: center;
+}
+.door {
+  width: 22px;
+  height: 45px;
+  text-indent: -9999em;
+  background: url(https://sohonara.mysoho.com/assets/shop/img/btn/tpl_shop_logoff_000000.png)
+    no-repeat center / 22px 19px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.aside {
+  position: fixed;
+  top: 0;
+  left: -80%;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  z-index: 100;
+}
+.aside_inner {
+  display: flex;
+  flex-flow: column wrap;
+}
+.first {
+  padding: 5px 0;
+}
+.aside_inner span {
+  padding-bottom: 10px;
+  border: 1px solid #fafafa;
+}
+
+.telephone {
+  background-size: 46px auto;
+  box-shadow: 0 3px 7.6px 0.4px rgb(0 0 0 / 15%);
+  border-radius: 50%;
+
+  background-color: aquamarine;
+  width: 46px;
+  height: 46px;
+  z-index: 0;
+}
+.top_arrow {
+  background-size: 46px auto;
+  box-shadow: 0 3px 7.6px 0.4px rgb(0 0 0 / 15%);
+  border-radius: 50%;
+
+  background-color: aquamarine;
+  width: 46px;
+  height: 46px;
+  z-index: 0;
+  display: none;
+}
+.footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+}
+.seller_info {
+  font-size: 12px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.seller {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+.seller_a {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.glass_open {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  background-color: white;
+  z-index: 100;
+}
+.glass_open span {
+  cursor: pointer;
+}
+.glass_x {
+  float: right;
+}
+.glass_txt {
+  margin-top: 50px;
+  font-weight: bold;
+}
+.glass_second {
+  margin-top: 15px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.glass_second input {
+  flex-basis: 90%;
+}
+.glass_in_glass {
+  width: 22px;
+  height: 45px;
+  background: url(https://image.makeshop.co.kr/mysoho/assets/shop/img/common/bg_sch_h34.png)
+    no-repeat center;
+  overflow: hidden;
+  background-size: 16px 17px;
+}
+.footer {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.top_top {
+  margin-top: 40px;
+}
+.ft_info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 10px;
+}
+.ft_info div {
+  padding-bottom: 15px;
+}
+.ft_info {
+  text-align: center;
+}
+.bottom_two_btns {
+  max-width: 614px;
+  width: 100%;
+  position: fixed;
+  bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_container {
+  width: 100%;
+  border-top: 1px solid black;
+  padding: 25px;
+}
+.two_ft_btn button {
+  background-color: white;
+  border: 1px solid black;
+  color: gray;
+}
+.two_ft_btn button {
+  cursor: pointer;
+}

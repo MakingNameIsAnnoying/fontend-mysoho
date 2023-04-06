@@ -1,0 +1,78 @@
+.nuriri_all {
+  padding: 0;
+}
+.nuriri_head {
+  display: flex;
+  padding: 15px;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(233, 240, 250);
+}
+.nuriri_head img {
+  width: 60px;
+  height: 60px;
+}
+.ico_con {
+  width: 60px;
+  height: 60px;
+  border-radius: 50% 50%;
+  overflow: hidden;
+}
+.nuriri_head p {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.change_ico {
+  display: inline-block;
+  height: 47px;
+}
+.image_box {
+  margin: 10px;
+  position: relative;
+  width: 100%;
+  min-width: 140px;
+  min-height: 140px;
+  max-width: 290px;
+  max-height: 290px;
+  box-sizing: border-box;
+  object-fit: contain;
+  z-index: 0;
+}
+.img1 {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.for_row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.img_sep {
+  display: flex;
+  flex-flow: row wrap;
+}
+.in_cart {
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 7.5px;
+  right: 7.5px;
+  width: 45px;
+  height: 50px;
+  background: url(https://sohonara.mysoho.com/assets/shop/img/common/ico_cart_type1.png)
+    no-repeat center / 45px auto;
+}
+.img_info {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.info_price {
+  font-weight: bold;
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/public.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="stylesheet" href="/css/order_info.css" />
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <div class="contain_all d-flex justify-content-center">
+      <div class="container">
+        <div class="row">
+          <div class="header">
+            <script>
+              $(".header").load("/head.html");
+            </script>
+          </div>
+          <!-- 메인 -->
+
+          <div class="cart_conain_all">
+            <div class="cart_top_txt">
+              <div>
+                <input type="checkbox" />
+                <span>전체</span>
+                <span>1</span>
+              </div>
+              <div>장바구니</div>
+              <div>쓰레기통</div>
+            </div>
+            <span class="blank"></span>
+
+            <div class="basket-list">
+              <div class="for_chk">
+                <input type="checkbox" class="cb" />
+                <div class="bsk_con">
+                  <div class="bsk-info">
+                    <img
+                      src="https://img.makeshop.co.kr/1/1371/201902/d6a6527987d660f2b72290920ce2a33c.png"
+                      alt=""
+                    />
+
+                    <div class="for_between">
+                      <p class="cart_pd_name">퍼프블라우스 화이트</p>
+                      <div class="cart_btns">
+                        <div>x</div>
+                        <div>공유</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="" class="option">옵션수정</a>
+                  <div>
+                    퍼프블라우스 화이트,
+                    <span>갯수</span>
+                  </div>
+                  <div class="cart_price">
+                    <div>원가격</div>
+                    <div>실제가격</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="blank"></span>
+          </div>
+
+          <!-- 주문자 정보, 적립금 등등 -->
+          <div class="order_all">
+            <div
+              id="order"
+              class="order_top first1"
+              onclick="order_click(this);"
+            >
+              <span><h3>주문자 정보</h3></span>
+              <span>정보를 입력하세요</span>
+            </div>
+            <div class="for_half">
+              <div class="order_container">
+                <div class="">
+                  <div class="order_info">
+                    <div class="ckb_txt_container">
+                      <span>주문자 정보</span>
+                      <div>
+                        <input id="join" name="join" type="checkbox" />
+                        <span>회원가입</span>
+                      </div>
+                    </div>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="이름"
+                      class="name"
+                    />
+                    <div class="phoneNum">
+                      <select
+                        class="phone_selec"
+                        id="phone_first"
+                        name=""
+                        id=""
+                      >
+                        <option selected value="">010</option>
+                        <option value="">011</option>
+                        <option value="">016</option>
+                        <option value="">017</option>
+                        <option value="">018</option>
+                        <option value="">019</option>
+                        <option value="">직접입력</option>
+                      </select>
+                      <input
+                        id="phone"
+                        class="direct_phone"
+                        type="text"
+                        placeholder="- 없이 숫자만 입력"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="order_info">
+                      <div class="ckb_txt_container">
+                        <span>수령자 정보</span>
+                        <div>
+                          <input id="join" name="join" type="checkbox" />
+                          <span>주문자 정보와 같습니다</span>
+                        </div>
+                      </div>
+                      <input type="text" placeholder="이름" class="name" />
+                      <div class="phoneNum">
+                        <select class="phone_selec" name="" id="">
+                          <option selected value="">010</option>
+                          <option value="">011</option>
+                          <option value="">016</option>
+                          <option value="">017</option>
+                          <option value="">018</option>
+                          <option value="">019</option>
+                          <option value="">직접입력</option>
+                        </select>
+                        <input
+                          class="direct_phone"
+                          type="text"
+                          placeholder="- 없이 숫자만 입력"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="receiver_container">
+                    <!--  -->
+                    <div>
+                      <span>수령자 주소</span>
+                    </div>
+                    <div>
+                      <input
+                        id="address1"
+                        class="address"
+                        type="text"
+                        placeholder="우편번호"
+                        readonly
+                      />
+                      <a href="javascript:void(0);" onclick="address_popup();">
+                        <span>돋보기</span>
+                      </a>
+                    </div>
+                    <input id="address2" type="text" placeholder="기본주소" />
+                    <input
+                      id="address3"
+                      type="text"
+                      placeholder="나머지 주소"
+                    />
+                    <select name="" id="post">
+                      <option value="" selected>배송전 연락 바랍니다</option>
+                      <option value="">부재시 휴대폰으로 연락주세요</option>
+                      <option value="">부재시 경비실에 맡겨주세요</option>
+                      <option value="">택배함에 넣어주세요</option>
+                      <option value="">집앞에 놓아주세요</option>
+                      <option value="">직접입력</option>
+                    </select>
+                    <input
+                      class="before_post"
+                      type="text"
+                      placeholder="배송메세지를 입력하세요"
+                    />
+                  </div>
+                </div>
+              </div>
+              <span class="blank"></span>
+            </div>
+          </div>
+          <div class="order_all">
+            <div onclick="order_click(this);" class="order_top second">
+              <span><h3>적립금 사용</h3></span>
+              <span>로그인후, 사용가능합니다.</span>
+            </div>
+            <div class="for_half_2">
+              <div class="order_container">
+                <div class="mileage_con">
+                  <div class="ckb_txt_container">
+                    <div class="a">
+                      <span>보유적립금 0원</span>
+                      <div>
+                        <input id="join" name="join" type="checkbox" />
+                        <span>모두사용</span>
+                      </div>
+                    </div>
+                    <div class="how_much">
+                      <input type="text" readonly />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="blank"></span>
+            </div>
+          </div>
+          <div class="order_all">
+            <div onclick="order_click(this);" class="order_top third">
+              <span><h3>결제방법</h3></span>
+              <span>휴대폰 결제</span>
+            </div>
+            <div class="for_half_3">
+              <div class="order_container">
+                <div>
+                  <div class="pay_box">
+                    <input value="0" type="radio" name="payment" />
+                    <span>삼성페이</span>
+                    <button>지원 단말 확인</button>
+                  </div>
+                  <p>삼성페이 결제는 안드로이드 기종에서만 가능합니다.</p>
+                </div>
+                <div>
+                  <div class="pay_box">
+                    <input value="1" type="radio" name="payment" checked />
+                    <span>휴대폰 결제</span>
+                  </div>
+                  <p>
+                    핸드폰 요금 청구서에 '소액결제'로 표시됩니다. <br />
+                    결제건의 취소는 해당 달에만 가능합니다.
+                  </p>
+                </div>
+                <div>
+                  <div class="pay_box">
+                    <input value="2" type="radio" name="payment" />
+                    <span>무통장 입금(반드시 주문자 성함으로 입금)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 결제 약관 시작 -->
+          <div class="agree_box">
+            <div class="agree_top">
+              <a
+                href="javascript:void(0);"
+                class="box_all_agree"
+                onclick="agree('first');"
+              >
+                <input type="checkbox" class="ck_agree_all" />
+                <span>약관 결제 전체 동의</span>
+              </a>
+            </div>
+            <div class="agree_all">
+              <div class="agree_row">
+                <div>
+                  <input type="checkbox" class="1-1" />
+                  <a
+                    href="javascript:void(0);"
+                    class="box_agree"
+                    onclick="agree('1');"
+                  >
+                    <span>이용약관 동의(필수)</span>
+                  </a>
+                </div>
+                <button onclick="open_popup('order',1)">보기</button>
+              </div>
+              <div class="agree_row">
+                <div>
+                  <input type="checkbox" class="1-2" />
+                  <a
+                    href="javascript:void(0);"
+                    class="box_agree"
+                    onclick="agree('2');"
+                  >
+                    <span> 개인정보 수집.이용 동의(필수)</span>
+                  </a>
+                </div>
+                <button onclick="open_popup('order',2)">보기</button>
+              </div>
+              <div class="agree_row">
+                <div>
+                  <input type="checkbox" class="1-3" />
+                  <a
+                    href="javascript:void(0);"
+                    class="box_agree"
+                    onclick="agree('3');"
+                  >
+                    <span>개인정보 수집 이용 동의 (선택)</span>
+                  </a>
+                </div>
+                <button onclick="open_popup('order',3)">보기</button>
+              </div>
+              <div class="agree_row">
+                <div>
+                  <input type="checkbox" class="1-4" />
+                  <a
+                    href="javascript:void(0);"
+                    onclick="agree('4');"
+                    class="box_agree"
+                  >
+                    <span>위 구매조건 확인 및 결제진행 동의</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 총상품금액 등등 -->
+          <div class="inner">
+            <div class="sum_money">
+              <span>총상품 금액</span>
+              <span class="bold">35,000원</span>
+            </div>
+            <div class="price_box">
+              <li>
+                <ul class="sum_post_price">
+                  <li>
+                    총 배송비
+                    <span class="bold">+0원</span>
+                  </li>
+                </ul>
+                <div class="detail_price_div">
+                  <ul>
+                    <li>
+                      <div>
+                        <span> -기본배송비 </span>
+                        <span>
+                          <em><i>(+)</i></em>
+                          <em class="price">0원</em>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        -지역배송비
+                        <span>
+                          <em><i>(+)</i></em>
+                          <em class="price">0원</em>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </div>
+            <div class="price_box">
+              <li>
+                <ul class="sum_post_price">
+                  <li>
+                    총할인/ 적립금 사용금액
+                    <span class="bold">-0원</span>
+                  </li>
+                </ul>
+                <div class="detail_price_div">
+                  <ul>
+                    <li>
+                      <div>
+                        <span> -상품할인 </span>
+                        <span>
+                          <em><i>(+)</i></em>
+                          <em class="price">0원</em>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        -쿠폰할인
+                        <span>
+                          <em><i>(+)</i></em>
+                          <em class="price">0원</em>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        -적립금 사용
+                        <span>
+                          <em><i>(+)</i></em>
+                          <em class="price">0원</em>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="final_price">
+                <span>최종주문금액</span>
+                <span class="final_price_num">35,000원</span>
+              </li>
+              <div class="final_mileage">
+                <span>(예상 적립금 0 원 , 비회원 적립 불가)</span>
+              </div>
+              <a
+                href="javascript:void(0);"
+                class="pay_btn"
+                onclick="payLast();"
+              >
+                <div class="pay_div">결제하기</div>
+              </a>
+              <div class="warning">
+                <span class="warning-labels-font">
+                  <label
+                    ><img
+                      style="width: 14px"
+                      src="//image.makeshop.co.kr/mysoho/assets/admin/images/common/m-notice-icon.png"
+                  /></label>
+                  마이소호는 통신판매 당사자가 아닙니다.<br />상품정보/주문/배송/환불
+                  등 일체의 책임을 지지 않습니다.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 푸터 -->
+          <div class="bottom_two_btns">
+            <script>
+              $(".bottom_two_btns").load("/btns.html");
+            </script>
+          </div>
+
+          <div class="footer">
+            <script>
+              $(".footer").load("/footer.html");
+            </script>
+          </div>
+          <!-- 화면에 붙은 버튼 -->
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/js/public.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/order.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

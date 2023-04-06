@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="/css/public.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="/css/login.css"
+		/>
+	</head>
+	<body>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+		<div class="contain_all col-6 d-flex justify-content-center">
+			<div class="container">
+				<div class="row">
+					<div class="header">
+						<script>
+							$(".header").load("/head.html");
+						</script>
+					</div>
+
+					<!-- 검색창 -->
+					<div class="glass_open">
+						<script>
+							$(".glass_open").load("/searcher.html");
+						</script>
+					</div>
+					<!-- 사이드 -->
+					<div class="aside">
+						<script>
+							$(".aside").load("/side.html");
+						</script>
+					</div>
+					<!-- 메인 -->
+					<div class="main_con">
+						<div class="lo_txt"><h2>로그인</h2></div>
+						<div class="lo_main">
+							<input
+								type="text"
+								placeholder="아이디 입력"
+							/>
+							<input
+								type="password"
+								placeholder="비밀번호 입력"
+							/>
+							<button>로그인</button>
+							<div class="txt">
+								<a href="">회원가입</a>
+								<a href="">아이디 찾기</a>
+								<a href="">비번찾기</a>
+							</div>
+							<button>비회원 주문하기</button>
+						</div>
+					</div>
+
+					<!-- 푸터 -->
+
+					<div class="bottom_two_btns">
+						<script>
+							$(".bottom_two_btns").load("/btns.html");
+						</script>
+					</div>
+
+					<div class="footer">
+						<script>
+							$(".footer").load("/footer.html");
+						</script>
+					</div>
+					<!-- 화면에 붙은 버튼 -->
+				</div>
+			</div>
+		</div>
+		<script
+			type="text/javascript"
+			src="/js/public.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="/js/main.js"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+			integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
